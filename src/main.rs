@@ -1,13 +1,8 @@
-//! SigmaOS Component CLI
+//! blender2 component binary.
+//!
+//! Component logic lives in the library crate (`src/lib.rs`); this binary is
+//! a thin entry point kept minimal so the crate builds and tests run.
 
-use anyhow::Result;
-
-#[tokio::main]
-async fn main() -> Result<()> {
-    env_logger::init();
-    
-    println!("SigmaOS Component initialized");
-    println!("Component compatibility for SigmaOS");
-    
-    Ok(())
+fn main() {
+    println!("SigmaOS {} v{}", env!("CARGO_PKG_NAME"), env!("CARGO_PKG_VERSION"));
 }
