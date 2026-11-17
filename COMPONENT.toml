@@ -3,7 +3,7 @@ name = "SigmaOS-blender2"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "blender2 component"
+description = "Blender 3D software compatibility layer for SigmaOS"
 upstream = []
 
 [contract]
