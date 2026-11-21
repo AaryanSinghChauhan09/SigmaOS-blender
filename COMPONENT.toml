@@ -1,16 +1,16 @@
 [component]
-name = "SigmaOS-blender2"
+name = "SigmaOS-blender"
 tier = 2
-stability = "scaffold"
-language = "rust"
-description = "Blender 3D software compatibility layer for SigmaOS"
+stability = "beta"
+language = "shell"
+description = "SigmaOS integration for 3D creation suite: package management, config deployment, and CLI helpers."
 upstream = []
 
 [contract]
-provides = ["component"]
+provides = ["app-manager:blender"]
 depends_on = []
 
 [maturity]
 status = "Implemented"
-test_evidence = "Compiles and passes AAA unit tests"
-next_milestone = "Hardware and runtime integration"
+test_evidence = "test.sh: syntax + metadata + isolated-HOME lifecycle checks"
+next_mestone = "Per-app config polish"
