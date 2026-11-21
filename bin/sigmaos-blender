@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# sigmaos-blender — SigmaOS helper for blender2.
+set -euo pipefail
+APP="blender"
+cmd="${1:-status}"
+case "$cmd" in
+  launch)  xdg-open "$(command -v $APP || command -v ${APP}bin || echo /usr/bin/$APP)" 2>/dev/null || echo "$APP not installed";;
+  config)  echo "config dir: $HOME/.config/BLENDER"; ls "$HOME/.config/BLENDER" 2>/dev/null | head;;
+  reset)   echo "remove $HOME/.config/BLENDER to reset $APP";;
+  *) echo "usage: sigmaos-blender launch|config|reset" >&2; exit 2;;
+esac
