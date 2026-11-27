@@ -1,0 +1,6 @@
+[component]
+name = "SigmaOS-blender"
+description = "Blender project/file manager, reads .blend file metadata (magic bytes, version)"
+category = "tools"
+license = "GPL-3.0-or-later"
+language = "rust"
